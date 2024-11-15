@@ -387,6 +387,6 @@ async function messageBox(message , Boolen){
 
 function logOut(){
     localStorage.removeItem("token")
-    window.location.href = "signup.html"
+    window.location.href = "index.html"
 }
 
