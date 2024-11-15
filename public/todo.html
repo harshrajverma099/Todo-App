@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" style="height:auto;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ToDo-List </title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="relative bg-gray-100">
+    <div class="w-[450px] mt-5 relative p-5">
+        <p class="font-extrabold text-3xl justify-center flex items-center w-full">Todo App</p>
+        <div class="w-full justify-between items-center flex mt-10 ">
+            <input id="addTask" type="text" class="bg-white w-9/12 h-10 rounded-md border border-gray-300 text p-3 outlines"  placeholder="Add a new todo...">
+            <button class="w-2/12 bg-black h-10 rounded-md text-white text hover:bg-gray-800 active:scale-95 transition-all duration-300" onclick="addTasks()"><pre>+  Add</pre></button>
+        </div>
+        <div class="mt-6">
+            <div class="justify-center items-center flex">
+                <button id="allBtn" class=" bg-black text-white px-4 py-2 border border-gray-200 rounded-md mx-1" onclick="allTask()">All</button>
+                <button id="activeBtn" class=" bg-white px-4 py-2 text-black border border-gray-200 rounded-md mx-1" onclick="activeTask()">Active</button>
+                <button id="completedBtn" class=" bg-white px-4 py-2 text-black border border-gray-200 rounded-md mx-1" onclick="completedTask()">Completed</button>
+            </div>
+        </div>
+        <div id="allTaskList" class="w-full h-[35rem] overflow-scroll" >
+
+        </div>
+        <div id="activeTaskList" class="hidden w-full">
+            
+        </div>
+        <div id="completedTaskList" class="hidden w-full">
+            
+        </div>
+    </div>
+    <div class="h-[45px] border-2 message-box border-black rounded-[23px] px-3 flex justify-center items-center absolute bg-gray-800 text-white font-medium ">
+
+    </div>
+    <button class="absolute right-5 top-5 w-20 bg-black h-10 rounded-md text-white text hover:bg-gray-800 active:scale-95 transition-all duration-300" onclick="logOut()" >
+        log out
+    </button>
+    <script src="script.js"></script>
+    <script src="todo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

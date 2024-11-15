@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ToDo-List </title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="relative">
+    <div id="signUpPage" class="w-96 h-80 border rounded-lg border-gray-200 bg-white p-6 shadow-css hidden ">
+        <p class="text-2xl font-bold">Sign Up with OTP</p>
+        <p class="text-gray-500">Enter your email to receive a one-time password for email verification.</p>
+        <p class="text-black mt-5">Email</p>
+        <input id="signUpEmail" class="border w-full h-10 rounded-md pl-3 text mt-1 outlines border-gray-400" placeholder="Enter your email" type="email">
+        <button id="requestOtp" class="w-full justify-center items-center flex mt-5 rounded-md bg-black text-white h-10 hover:border-black hover:border hover:text-black hover:bg-transparent transition-all duration-200 active:scale-95" onclick="verification()">
+            Resquest OTP
+        </button>
+        <p class="justify-center items-center flex mt-4 text-gray-500">Have an account? <button onclick="accountExist()" class="text-blue-600 cursor-pointer hover:text-blue-900 transition-all duration-200">Log in</button> </p>
+    </div> 
+
+    <div id="otpPage" class="w-96 h-72 border rounded-lg border-gray-200 bg-white p-6 hidden shadow-css">
+        <p class="text-2xl font-bold">Enter OTP</p>
+        <p class="text-gray-500">We've sent a code to your email. Please enter it below.</p>
+        <p class="text-gray-500">OTP only valid for 5 minutes</p>
+        <p class="text-black mt-5">One-Time Password</p>
+        <input id="verifyOtp" class="border w-full h-10 rounded-md px-3  text mt-1 outlines border-gray-400" placeholder="Enter OTP" type="number">
+        <button class="w-full justify-center items-center flex mt-5 rounded-md bg-black text-white h-10 hover:border-black hover:border hover:text-black hover:bg-transparent transition-all duration-200 active:scale-95" onclick="verifyOTP()">
+            Verify OTP
+        </button>
+    </div>
+
+    <div id="passwordPage" class="w-96 h-96 border rounded-lg border-gray-200 bg-white p-6 hidden shadow-css ">
+        <p class="text-2xl font-bold">Enter Password</p>
+        <p class="text-gray-500">Please enter your password to complete the Sign up process.</p>
+        <p class="text-black mt-5">Password</p>
+        <input id="password" class="border w-full h-10 rounded-md px-3  text mt-1 outlines border-gray-400" placeholder="Enter your password" type="password" >
+        <p class="text-black mt-5">Name</p>
+        <input id="name" class="border w-full h-10 rounded-md px-3  text mt-1 outlines border-gray-400" placeholder="Enter your name" type="text" >
+        <button class="w-full justify-center items-center flex mt-5 rounded-md bg-black text-white h-10 hover:border-black hover:border hover:text-black hover:bg-transparent transition-all duration-200 active:scale-95" onclick="signUp()">
+            Sign up
+        </button>
+    </div>
+
+    <div id="signIn" class="w-96 h-96 border rounded-lg border-gray-200 bg-white p-6  shadow-css">
+        <p class="text-2xl font-bold">Sign In</p>
+        <p class="text-gray-500">Enter your credentials to access your account.</p>
+        <p class="text-black mt-5">Email</p>
+        <input id="emailSignIn" class="border w-full h-10 rounded-md px-3  text mt-1 outlines border-gray-400" placeholder="Enter your email" type="text" >
+        <p class="text-black mt-5">Password</p>
+        <input id="passwordSignIn" class="border w-full h-10 rounded-md px-3  text mt-1 outlines border-gray-400" placeholder="Enter your password" type="password" >
+        <button class="w-full justify-center items-center flex mt-5 rounded-md bg-black text-white h-10 hover:border-black hover:border hover:text-black hover:bg-transparent transition-all duration-200 active:scale-95" onclick="signIn()">
+            Sign in
+        </button>
+        <p class="justify-center items-center flex mt-2 text-gray-500">New user? <button onclick="newUser()" class="text-blue-600 cursor-pointer hover:text-blue-900 transition-all duration-200">Sign up</button> </p>
+    </div>
+
+    <div class="h-[45px] border-2 message-box border-black rounded-[23px] px-3 flex justify-center items-center absolute bg-gray-800 text-white font-medium ">
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

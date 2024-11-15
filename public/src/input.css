@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,html{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.border{
+    border-width: 1px;
+}
+.text::placeholder{
+    font-size: 14px;
+    color: rgb(127, 127, 127);
+}
+.outlines:focus{
+    outline-offset: 4px;
+    outline-width: 1px;
+    outline-color:gray;
+}
+.message-box{
+    top:-100px;
+    transition: top 0.7s ease;
+    z-index: 100;
+}
+.message-box.show{
+    top: 20px;
+}
+.shadow-css{
+    box-shadow: 0 0px 100px rgb(209, 209, 209);
+}
+.text{
+    font-size: 14px;
+}
